@@ -1,0 +1,127 @@
+{
+	//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
+		// 每一个页面的配置项目
+		{
+			"path": "pages/index/index",
+			"style": {
+				// 标题
+				"navigationBarTitleText": "谦 哥 烧 烤 摊",
+				// 背景色
+				"navigationBarBackgroundColor": "#ff5566",
+				// 文字颜色
+				"navigationBarTextStyle": "white",
+				// 样式
+				"navigationStyle": "default",
+				// 开启拖拽刷新
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				// 自定义标题
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/banner-ad",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				// 自定义标题
+				"navigationStyle": "custom"
+			}
+		}
+	    ,{
+            "path" : "pages/classify/classify",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/cake/cake",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/bread/bread",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+            "path" : "pages/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+            "path" : "pages/food/food",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	// 全局样式
+	"globalStyle": {
+		"navigationBarTitleText": "谦 哥 烧 烤 摊",
+		"navigationBarBackgroundColor": "#ff5566",
+		"navigationBarTextStyle": "white",
+		"navigationStyle": "default"
+	},
+	"uniIdRouter": {
+		
+	},
+	// 底部菜单栏
+	"tabBar": {
+		"color": "#d8d8d8",
+		"selectedColor": "#444",
+		"list": [
+			{
+			"text": "点餐",
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tableware.png",
+			"selectedIconPath": "static/tableware.png"
+			},
+			{
+			"text": "主页",
+			"pagePath": "pages/home/home",
+			"iconPath": "static/document.png",
+			"selectedIconPath": "static/document.png"
+			},
+			{
+			"text": "商家",
+			"pagePath": "pages/classify/classify",
+			"iconPath": "static/shop.png",
+			"selectedIconPath": "static/shop.png"
+			}
+		]
+	}
+}
