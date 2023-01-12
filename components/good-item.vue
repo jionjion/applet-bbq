@@ -2,20 +2,20 @@
 <template>
 	<view class="cake-item">
 		<view class="poster">
-			<image src="../static/yangrouchuan.jpeg" style="height: 350upx"></image>
+			<image :src="goodData.img" style="height: 350upx"></image>
 		</view>
 		<view class="info-cont">
 			<view class="info flex align-center justify-between">
 				<view>
-					<view class="bbq-font-size-32">羊肉串</view>
-					<view class="bbq-font-size-32">巨好吃的羊肉串</view>
+					<view class="bbq-font-size-32">{{goodData.name}}</view>
+					<view class="bbq-font-size-32">{{goodData.french}}</view>
 				</view>
 				<view class="cart-btn">
 					<text class="iconfont icon-danju"></text>
 				</view>
 			</view>
 			<view class="info">
-				<view class="bbq-font-size-32">$ 210.00</view>
+				<view class="bbq-font-size-32">$ {{goodData.price}}</view>
 			</view>
 		</view>
 	</view>
@@ -24,6 +24,8 @@
 <script>
 	export default {
 		name: "good-item",
+		/* 驼峰命名 */
+		props:["goodData"],
 		data() {
 			return {
 
