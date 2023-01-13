@@ -46,7 +46,7 @@
 
 			<!-- 自定义商品 -->
 			<view class="flex flex-wrap padding-sm justify-between">
-				<good-item v-for="(item, index) in 4"></good-item>
+				<good-item :good-data="good"></good-item>
 			</view>
 
 			<!-- 返回顶部 -->
@@ -65,7 +65,14 @@
 				// 是否显示返回顶部
 				isShowScrollTop:false,
 				// 顶部定位元素
-				topItem:''
+				topItem:'',
+				// 商品元素
+				good:{
+					img: '../../static/yangrouchuan.jpeg',
+					name: '羊肉串',
+					french: '好好吃的羊肉串',
+					price: 10.9
+				}
 			}
 		},
 		methods:{
@@ -89,6 +96,10 @@
 			}
 		},
 		onLoad() {
+			// 使用 vuex
+			this.$store.commit('increment')
+			console.log("使用 vuex: ", this.$store.state.count)
+			
 			// // 直接请求
 			// uni.request({
 			// 	url:' https://api.github.com/octocat',

@@ -3,6 +3,10 @@ import App from './App'
 // 引入 uView UI
 import uView from './uni_modules/vk-uview-ui';
 
+// 使用 vuex
+import store from './store'
+
+
 import { createSSRApp } from 'vue'
 
 // 全局挂载方法
@@ -22,6 +26,8 @@ export function createApp() {
  
   // 使用 uView UI
   app.use(uView)
+  // 使用 vuex
+  app.use(store)
   // 全局挂载
   app.component('test-my-component', myComponent)
   app.component('nav-custom', navCustom)
